@@ -5,7 +5,7 @@
  * @override Unit Test
  */
 
-import { Pattern } from "@sudoo/pattern";
+import { Pattern, validatePatternSchema } from "@sudoo/pattern";
 import { expect } from "chai";
 import * as Chance from "chance";
 import { createCoordinatePattern } from "../../src";
@@ -18,7 +18,8 @@ describe('Given [Coordinate] helper functions', (): void => {
     it('should be able to create pattern object', (): void => {
 
         const pattern: Pattern = createCoordinatePattern();
+        const validation: boolean = validatePatternSchema(pattern);
 
-        expect(typeof pattern).to.be.equal('object');
+        expect(validation).to.be.true;
     });
 });
