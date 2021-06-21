@@ -41,12 +41,16 @@ lint-fix:
 	--config ./typescript/.eslintrc.json --fix
 
 install:
-	@echo "[INFO] Installing dev Dependencies"
+	@echo "[INFO] Installing Development Dependencies"
 	@yarn install --production=false
 
 install-prod:
-	@echo "[INFO] Installing Dependencies"
+	@echo "[INFO] Installing Production Dependencies"
 	@yarn install --production=true
+
+outdated: install
+	@echo "[INFO] Checking Outdated Dependencies"
+	@yarn outdated
 
 license: clean
 	@echo "[INFO] Sign files"
@@ -61,5 +65,5 @@ publish: install tests lint license build
 	@cd app && npm publish --access=public
 
 publish-dry-run: install tests lint license build
-	@echo "[INFO] Publishing package (Dry Run)"
+	@echo "[INFO] Publishing package"
 	@cd app && npm publish --access=public --dry-run
