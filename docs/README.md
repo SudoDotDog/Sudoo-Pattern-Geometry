@@ -11,6 +11,8 @@
 
 ```sh
 yarn add @sudoo/pattern-geometry
+yarn add @sudoo/pattern # Peer Dependencies
 # Or
 npm install @sudoo/pattern-geometry --save
+npm install @sudoo/pattern --save # Peer Dependencies
 ```
