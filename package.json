@@ -1,7 +1,7 @@
 {
   "name": "@sudoo/pattern-geometry",
   "version": "1.0.0",
-  "description": ":droplet: Pattern implement for geometry package",
+  "description": "Pattern implement for geometry package",
   "directories": {
     "doc": "docs"
   },
@@ -19,9 +19,8 @@
     "@sudoo/pattern": "*"
   },
   "devDependencies": {
-    "@sudoo/io": "^1.8.0",
-    "@sudoo/pattern": "^1.6.1",
-    "@sudoo/triforce": "^3.0.0"
+    "@sudoo/pattern": "^1.10.0",
+    "@sudoo/triforce": "^3.7.0"
   },
   "nyc": {
     "extension": [
